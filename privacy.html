@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Alza Mailbot</title>
+<style>
+  body { margin: 0; background: #fafaf8; color: #24282e; font-family: system-ui, sans-serif; line-height: 1.65; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  .tag { color: #6b7078; margin: 0 0 28px; }
+  h2 { font-size: 1.1rem; margin: 30px 0 8px; }
+  a { color: #1d4ed8; }
+  code { background: #efeeea; padding: 1px 5px; border-radius: 4px; }
+  footer { margin-top: 48px; font-size: .9rem; color: #6b7078; border-top: 1px solid #e3e2dd; padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="tag">Alza Mailbot · Effective 28 September 2026</p>
+
+  <p>Alza Mailbot ("the service") is a demo email assistant that automatically
+  answers messages sent to one dedicated mailbox,
+  <code>techmailbot6@gmail.com</code>. This policy describes what data the
+  service touches and how it is handled.</p>
+
+  <h2>What data the service accesses</h2>
+  <p>The service uses the Gmail API to access <strong>only its own dedicated
+  mailbox</strong>. It never accesses any other Google account or mailbox. For
+  messages arriving in that mailbox it reads the sender address, subject,
+  message text and attachments, sends replies, and marks processed messages as
+  read.</p>
+
+  <h2>How the data is used</h2>
+  <p>Incoming message content is used for a single purpose: generating a reply.
+  The message text, conversation history of the same email thread and
+  attachments are passed to Google Vertex AI (Gemini) to produce the answer,
+  which is then sent back to the sender. The service does not use message
+  content for advertising, profiling, or training of models, and does not sell
+  or share it with any third party.</p>
+
+  <h2>What is stored</h2>
+  <p>The service keeps a minimal processing state in Google Cloud Firestore
+  (region <code>europe-west3</code>, EU): Gmail message identifiers and a
+  mailbox history position, used to avoid answering the same email twice.
+  Message content and attachments are processed in memory only and are not
+  persisted by the service; the emails themselves remain in the Gmail mailbox
+  under Google's own terms.</p>
+
+  <h2>Limited Use disclosure</h2>
+  <p>Alza Mailbot's use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+  API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Your choices</h2>
+  <p>If you emailed the mailbox and want your messages or the related
+  processing records deleted, write to <code>techmailbot6@gmail.com</code> and
+  they will be removed.</p>
+
+  <footer>
+    <p>This is a personal engineering demo and is not affiliated with or
+    endorsed by Alza.cz. Contact: <code>techmailbot6@gmail.com</code></p>
+  </footer>
+</main>
+</body>
+</html>

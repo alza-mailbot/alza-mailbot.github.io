@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alza Mailbot</title>
+<style>
+  body { margin: 0; background: #fafaf8; color: #24282e; font-family: system-ui, sans-serif; line-height: 1.65; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  .tag { color: #6b7078; margin: 0 0 28px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+  a { color: #1d4ed8; }
+  footer { margin-top: 48px; font-size: .9rem; color: #6b7078; border-top: 1px solid #e3e2dd; padding-top: 16px; }
+  code { background: #efeeea; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Alza Mailbot</h1>
+  <p class="tag">An email-based AI customer-support assistant — a technical demo project.</p>
+
+  <h2>What it does</h2>
+  <p>Alza Mailbot watches one dedicated Gmail inbox. When a customer sends an
+  email there, the bot reads the message (including PDF, image and audio
+  attachments), generates an answer with a large language model, and replies
+  within the original email thread — typically in under two minutes. Follow-up
+  questions are answered with the whole conversation in context.</p>
+
+  <h2>How it is built</h2>
+  <p>Two services run on Google Cloud Run: an email processor (Gmail API,
+  Pub/Sub push notifications, Firestore state) and a chatbot service (Vertex AI
+  Gemini). The source code lives in the
+  <a href="https://github.com/alza-mailbot">alza-mailbot GitHub organization</a>.</p>
+
+  <h2>Privacy</h2>
+  <p>The bot accesses only its own dedicated mailbox and processes incoming
+  messages solely to generate a reply. See the full
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    <p>This is a personal engineering demo and is not affiliated with or
+    endorsed by Alza.cz. Contact: <code>techmailbot6@gmail.com</code></p>
+  </footer>
+</main>
+</body>
+</html>
